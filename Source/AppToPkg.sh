@@ -1,10 +1,18 @@
 #!/bin/bash
 
-# AppToPkg is designed to automate aspects of the deployment of .apps in Addigy
-# which are prone to human error. Passing a .app file path as an argument in
-# AppToPkg will generate an installer, gather likely candidates for an icon in
-# Addigy custom software, and generate install, conditional, and uninstall scripts
-# to be used in Addigy's custom software interface.
+# Copyright 2015 Cirrus Partners, LLC
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 function setVariables() {
     fileName=$(printf "${f##*/}" | sed 's/\.[^.]*$//' )
